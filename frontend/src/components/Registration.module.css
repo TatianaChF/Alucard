@@ -33,3 +33,26 @@
     transition: all 0.3s;
     border: 1px solid #1B1717;
 }
+
+.form_container button {
+    color: #ffffff;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    letter-spacing: 0.1em;
+    padding: 10px 10px;
+    width: 200px;
+    transition: all 0.5s ease;
+    border-radius: 10px;
+    border: solid #810000;
+    background: #810000;
+    text-decoration: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.form_container button:hover {
+    background: #ffff;
+    color: #810000;
+    transition: 0.5s;
+}
