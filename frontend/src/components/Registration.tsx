@@ -4,7 +4,7 @@ import styles from "./Registration.module.css"
 export const Registration = () => {
     return (
         <div className={styles.container}>
-            <Link to="">Назад</Link>
+            <Link to="" className={styles.link}>← Назад</Link>
             <form className={styles.form_container}>
                 <div className={styles.form_input}>
                     <label htmlFor="surname">Фамилия</label>
