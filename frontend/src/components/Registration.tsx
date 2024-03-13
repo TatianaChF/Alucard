@@ -34,6 +34,7 @@ export const Registration = () => {
                     <label htmlFor="pas_repeat">Повторите пароль</label>
                     <input type="password" name="pas_repeat" id="pas_repeat" />
                 </div>
+                <button>Зарегистрироваться</button>
             </form>
         </div>
     )
