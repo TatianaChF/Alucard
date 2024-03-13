@@ -24,7 +24,8 @@
     display: block;
 }
 
-.link {
+.link,
+.link_city {
     text-decoration: none;
     font-size: 24px;
     color: #1B1717;
@@ -32,4 +33,25 @@
 
 .link:hover {
     color: #CE1212;
+}
+
+.link_city {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.selectLanguage {
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #EEEBDD;
+    border: 1px solid #1B1717;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.selectLanguage__option {
+    border: 1px solid #1B1717;
 }

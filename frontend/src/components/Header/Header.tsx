@@ -22,22 +22,18 @@ export const Header = () => {
                 </div>
             </div>
             <div className={styles.list}>
-                    <Link to="">
+                    <Link to="" className={styles.link_city}>
                         Санкт-Петербург
                         <img alt="" src={location} />
                     </Link>
-                    <Link to="">
+                    <Link to="" className={styles.link}>
                         <img alt="" src={account} />
                     </Link>
-                    <select role="select" defaultValue={"ru"}>
-                        <option value="ru">ru</option>
+                    <select role="select" defaultValue={"ru"} className={styles.selectLanguage}>
+                        <option value="ru" className={styles.selectLanguage__option}>ru</option>
                     </select>
                 </div>
         </div>
 
     )
 }
-
-/*
-            <a href="#"class="menu">Санкт-Петербург<img alt="" src="location.svg"> </a>
-            <a href="#"class="menu"><img alt="" src="account.svg"></a> */
