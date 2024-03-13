@@ -44,6 +44,7 @@
     display: block;
     transition: all 0.3s;
     border: 1px solid #1B1717;
+    background-color: #EEEBDD;
 }
 
 .form_container button {
