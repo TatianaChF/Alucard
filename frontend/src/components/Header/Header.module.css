@@ -1,4 +1,29 @@
+.container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
 .logo {
     width: 80px;
     height: 80px;
+}
+
+.menu {
+    display: flex;
+    gap: 40px;
+}
+
+.menu li {
+    display: block;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 24px;
+    color: #1B1717;
+}
+
+.link:hover {
+    color: #CE1212;
 }
