@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom"
+import styles from "./Registration.module.css"
 
 export const Registration = () => {
     return (
-        <div>
+        <div className={styles.container}>
             <Link to="">Назад</Link>
-            <form>
+            <form className={styles.form_container}>
                 <div>
                     <label htmlFor="surname">Фамилия</label>
                     <input type="text" name="surname" id="surname" />
