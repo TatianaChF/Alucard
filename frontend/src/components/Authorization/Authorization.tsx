@@ -13,7 +13,7 @@ export const Authorization = () => {
                     <label htmlFor="password">Пароль</label>
                     <input type="password" name="password" id="password" />
                 </div>
-                <div>
+                <div className={styles.form_btn}>
                     <button>Войти</button>
                     <p>или</p>
                     <Link to="">Зарегистрироваться</Link>
