@@ -7,11 +7,11 @@ export const Authorization = () => {
             <form  className={styles.form_container}>
                 <div className={styles.form_input}>
                     <label htmlFor="email">E-mail</label>
-                    <input type="email" name="email" id="email" />
+                    <input type="email" name="email" id="email" placeholder="adress@mail.ru" />
                 </div>
                 <div className={styles.form_input}>
                     <label htmlFor="password">Пароль</label>
-                    <input type="password" name="password" id="password" />
+                    <input type="password" name="password" id="password" placeholder="Введите пароль" />
                 </div>
                 <div className={styles.form_btn}>
                     <button>Войти</button>
