@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export const Authorization = () => {
     return (
         <div>
@@ -9,6 +11,11 @@ export const Authorization = () => {
                 <div>
                     <label htmlFor="password">Пароль</label>
                     <input type="password" name="password" id="password" />
+                </div>
+                <div>
+                    <button>Войти</button>
+                    <p>или</p>
+                    <Link to="">Зарегистрироваться</Link>
                 </div>
             </form>
         </div>
