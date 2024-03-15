@@ -64,3 +64,14 @@
 .card_info div {
     cursor: pointer;
 }
+
+.doctors {
+    color: #810000;
+}
+
+.card_doc {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: #810000;
+    gap: 10px;
+}

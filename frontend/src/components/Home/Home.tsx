@@ -9,6 +9,10 @@ import inf6 from "./../../assets/images/inf6.png"
 import inf7 from "./../../assets/images/inf7.png"
 import inf8 from "./../../assets/images/inf8.png"
 import inf9 from "./../../assets/images/inf9.png"
+import doc1 from "../../assets/images/катрочка врача 1.png"
+import doc2 from "../../assets/images/катрочка врача 2.png"
+import doc3 from "../../assets/images/катрочка врача 3.png"
+import doc4 from "../../assets/images/катрочка врача 4.png"
 
 export const Home = () => {
     return (
@@ -37,13 +41,13 @@ export const Home = () => {
                         <div><img src={inf9} width="400" /></div>
                     </div>
                 </div>
-                <div>
+                <div className={styles.doctors}>
                     <h1>Врачи</h1>
-                    <div>
-                        <div><img src="катрочка%20врача%201.png" width="600" /></div>
-                        <div><img src="катрочка%20врача%202.png" width="600" /></div>
-                        <div><img src="катрочка%20врача%203.png" width="600" /></div>
-                        <div><img src="катрочка%20врача%204.png" width="600" /></div>
+                    <div className={styles.card_doc}>
+                        <div><img src={doc1} width="570" /></div>
+                        <div><img src={doc2} width="570" /></div>
+                        <div><img src={doc3} width="570" /></div>
+                        <div><img src={doc4} width="570" /></div>
                     </div>
                 </div>
             </div>
