@@ -43,3 +43,24 @@
     background: white;
     transition: 0.5s;
 }
+
+.container {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+    align-content: center;
+}
+
+.info {
+    color: #810000;
+}
+
+.card_info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.card_info div {
+    cursor: pointer;
+}
