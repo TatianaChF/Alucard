@@ -1,6 +1,45 @@
 .img_main {
+    position: relative;
     width: 1519px;
     height: 650px;
     margin-left: -120px;
     margin-top: 20px;
+    z-index: 1;
+}
+
+.main_container {
+    position: absolute;
+    top: 25%;
+    transform: translate(0, -25%);
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 150px;
+    margin: 150px auto;
+    color: white;
+    font-size: 32px;
+    z-index: 2;
+}
+
+.name {
+    color: #CE1212;
+}
+
+.button {
+    font-family: "Manrope bold", sans-serif;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    user-select: none;
+    background: #810000;
+    padding: 24px 95px;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+
+.button:hover {
+    color: #810000;
+    background: white;
+    transition: 0.5s;
 }
