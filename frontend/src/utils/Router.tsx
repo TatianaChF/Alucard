@@ -3,6 +3,7 @@ import App from "../App";
 import { Registration } from "../components/Registration/Registration";
 import { Authorization } from "../components/Authorization/Authorization";
 import { Home } from "../components/Home/Home";
+import { Personal } from "../components/Personal/Personal";
 
 export const router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
             {
                 path: "authorization",
                 element: <Authorization />
+            },
+            {
+                path: "personal",
+                element: <Personal />
             }
         ]
     }
