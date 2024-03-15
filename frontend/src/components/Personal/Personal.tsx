@@ -1,5 +1,6 @@
 import styles from "./Personal.module.css"
 import avatar from "./../../assets/images/foto.png"
+import rectangle from "./../../assets/images/Rectangle.png"
 
 export const Personal = () => {
     return (
@@ -32,6 +33,72 @@ export const Personal = () => {
                         <p>Количество сдачи/<br />получения крови</p>
                     </div>
                     <button>Изменить</button>
+                </div>
+            </div>
+            <div>
+                <h3>Мои анализы</h3>
+                <div className={styles.cards}>
+                    <div className={styles.container_card}>
+                        <img src={rectangle} alt="rectangle" />
+                        <div className={styles.card_info}>
+                            <p>Дата и время сдачи анализа: <br />
+                                <b>11.11.2023 08:20</b>
+                            </p>
+                            <p>Медицинское учреждение: <br />
+                                <b>Название учреждение</b>
+                            </p>
+                            <p>Результаты <br />
+                                <b>ФИО_11_11.pdf</b>
+                            </p>
+                        </div>
+                    </div>
+                    <div className={styles.container_card}> 
+                        <img src={rectangle} alt="rectangle" />
+                        <div className={styles.card_info}>
+                            <p>Дата и время сдачи анализа: <br />
+                                <b>11.11.2023 08:20</b>
+                            </p>
+                            <p>Медицинское учреждение: <br />
+                                <b>Название учреждение</b>
+                            </p>
+                            <p>Результаты <br />
+                                <b>ФИО_11_11.pdf</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3>История записей</h3>
+                <div className={styles.cards}>
+                    <div className={styles.container_card}>
+                        <img src={rectangle} alt="rectangle" />
+                        <div className={styles.card_doctors}>
+                            <p>Дата и время сдачи анализа: <br />
+                                <b>11.11.2023 08:20</b>
+                            </p>
+                            <p>Медицинское учреждение: <br />
+                                <b>Название учреждение</b>
+                            </p>
+                            <p>Врач <br />
+                                <b>Фамилия Имя Отчество</b>
+                            </p>
+                        </div>
+                    </div>
+                    <div className={styles.container_card}> 
+                        <img src={rectangle} alt="rectangle" />
+                        <div className={styles.card_doctors}>
+                            <p>Дата и время сдачи анализа: <br />
+                                <b>11.11.2023 08:20</b>
+                            </p>
+                            <p>Медицинское учреждение: <br />
+                                <b>Название учреждение</b>
+                            </p>
+                            <p>Врач <br />
+                                <b>Фамилия Имя Отчество</b>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
