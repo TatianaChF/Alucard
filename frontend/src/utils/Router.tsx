@@ -4,6 +4,7 @@ import { Registration } from "../components/Registration/Registration";
 import { Authorization } from "../components/Authorization/Authorization";
 import { Home } from "../components/Home/Home";
 import { Personal } from "../components/Personal/Personal";
+import { HospitalRegistration } from "../components/HospitalRegistration/HospitalRegistration";
 
 export const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
             {
                 path: "personal",
                 element: <Personal />
+            },
+            {
+                path: "hospital",
+                element: <HospitalRegistration />
             }
         ]
     }
