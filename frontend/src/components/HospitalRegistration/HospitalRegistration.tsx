@@ -5,7 +5,7 @@ export const HospitalRegistration = () => {
     return (
         <div>
             <div className={styles.container}>
-                <Link to="" className={styles.link}>← Назад</Link>
+                <Link to="/" className={styles.link}>← Назад</Link>
                 <div>
                     <h1>Запись на прием</h1>
                     <h3>Имеются противопоказания к донорству</h3>

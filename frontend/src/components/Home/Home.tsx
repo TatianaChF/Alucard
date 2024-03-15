@@ -13,6 +13,7 @@ import doc1 from "../../assets/images/катрочка врача 1.png"
 import doc2 from "../../assets/images/катрочка врача 2.png"
 import doc3 from "../../assets/images/катрочка врача 3.png"
 import doc4 from "../../assets/images/катрочка врача 4.png"
+import { Link } from "react-router-dom"
 
 export const Home = () => {
     return (
@@ -23,7 +24,7 @@ export const Home = () => {
                     <p><span className={styles.name}>Алукард</span>  - <b>сервис для доноров, где есть все важное</b></p>
                     <p> Информация о донорстве, о врачах, запись на дотацию, карта мед организаций и другая
                         необходимая информация в одном месте</p>
-                    <button className={styles.button}>Хочу быть донором</button>
+                    <Link to="hospital" className={styles.button}>Хочу быть донором</Link>
                 </div>
             </div>
             <div className={styles.container}>

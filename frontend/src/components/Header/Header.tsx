@@ -9,7 +9,9 @@ export const Header = () => {
     return (
         <div className={styles.header}>
             <div className={styles.container}>
-                <img src={logo} alt="logo" className={styles.logo} />
+                <Link to="/">
+                    <img src={logo} alt="logo" className={styles.logo} />
+                </Link>
                 <div>
                     <ul className={styles.menu}>
                         <li>
@@ -22,17 +24,17 @@ export const Header = () => {
                 </div>
             </div>
             <div className={styles.list}>
-                    <Link to="" className={styles.link_city}>
-                        Санкт-Петербург
-                        <img alt="" src={location} />
-                    </Link>
-                    <Link to="" className={styles.link}>
-                        <img alt="" src={account} />
-                    </Link>
-                    <select role="select" defaultValue={"ru"} className={styles.selectLanguage}>
-                        <option value="ru" className={styles.selectLanguage__option}>ru</option>
-                    </select>
-                </div>
+                <Link to="" className={styles.link_city}>
+                    Санкт-Петербург
+                    <img alt="" src={location} />
+                </Link>
+                <Link to="authorization" className={styles.link}>
+                    <img alt="" src={account} />
+                </Link>
+                <select role="select" defaultValue={"ru"} className={styles.selectLanguage}>
+                    <option value="ru" className={styles.selectLanguage__option}>ru</option>
+                </select>
+            </div>
         </div>
 
     )

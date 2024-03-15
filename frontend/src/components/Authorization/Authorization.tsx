@@ -16,7 +16,7 @@ export const Authorization = () => {
                 <div className={styles.form_btn}>
                     <button>Войти</button>
                     <p>или</p>
-                    <Link to="" className={styles.link_reg}>Зарегистрироваться</Link>
+                    <Link to="/registration" className={styles.link_reg}>Зарегистрироваться</Link>
                 </div>
             </form>
         </div>
