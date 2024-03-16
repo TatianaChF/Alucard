@@ -1,3 +1,4 @@
+import { createSlice } from "@reduxjs/toolkit";
 import { registrationData } from "./types";
 
 const initialState: registrationData = {
@@ -9,3 +10,13 @@ const initialState: registrationData = {
     userPassword: "",
     isAuth: false
 }
+
+export const registrationSlice = createSlice({
+    name: 'registration',
+    initialState,
+    reducers: {
+
+    }
+})
+
+export default registrationSlice.reducer
