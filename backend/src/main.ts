@@ -20,16 +20,3 @@ app.use(errorHandler);
 app.listen(port, () => {
     console.log(`Server Started at ${port}`);
 });
-
-/* const server = app.listen(port, () => {
-    console.log(`[server]: Server is running at http://localhost:${port}`);
-});
-
-const cleanup = () => {
-    server.close(() => {
-        console.log("shutting down");
-    });
-};
-
-process.on("SIGINT", cleanup);
-process.on("SIGTERM", cleanup); */
