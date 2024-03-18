@@ -46,7 +46,7 @@ export const Header = () => {
                     </div>
                     <nav>
                         <button onClick={authButtonHandler}>
-                            {auth.isAuthenticated ? "Выход" : "Вход | Регистрация"}
+                            {auth.isAuthenticated ? "Выход" : <img className={styles.account_img} src={account} alt="account"/>}
                         </button>
                     </nav>
                 </div>
