@@ -3,8 +3,18 @@ import logo from "./../../assets/images/Frame.svg"
 import location from "./../../assets/images/location.svg"
 import account from "./../../assets/images/account.svg"
 import styles from "./Header.module.css"
+import { useAuth } from "react-oidc-context"
 
 export const Header = () => {
+    const auth = useAuth();
+    const clientEmail = auth.user?.profile.preferred_username;
+    const clientLastname = auth.user?.profile.family_name;
+    const authButtonHandler = () =>
+        auth.isAuthenticated
+            ? void auth.signoutRedirect({
+                post_logout_redirect_uri: window.location.origin,
+            })
+            : void auth.signinRedirect();
 
     return (
         <div className={styles.header}>
@@ -28,9 +38,18 @@ export const Header = () => {
                     Санкт-Петербург
                     <img alt="" src={location} />
                 </Link>
-                <Link to="authorization" className={styles.link}>
-                    <img alt="" src={account} />
-                </Link>
+                <div>
+                    <div>
+                        {auth.isAuthenticated && clientLastname}
+                        {clientLastname && <br />}
+                        {auth.isAuthenticated && clientEmail}
+                    </div>
+                    <nav>
+                        <button onClick={authButtonHandler}>
+                            {auth.isAuthenticated ? "Выход" : "Вход | Регистрация"}
+                        </button>
+                    </nav>
+                </div>
                 <select role="select" defaultValue={"ru"} className={styles.selectLanguage}>
                     <option value="ru" className={styles.selectLanguage__option}>ru</option>
                 </select>

@@ -1,7 +1,12 @@
-export const Providers = ({children}: { children: React.ReactNode }) => {
+import { AuthProvider } from "react-oidc-context"
+import { oidcConfig } from "./oidcConfig"
+
+export const Providers = ({ children }: { children: React.ReactNode }) => {
     return (
         <>
-            {children}
+            <AuthProvider {...oidcConfig}>
+                {children}
+            </AuthProvider>
         </>
     )
 }
