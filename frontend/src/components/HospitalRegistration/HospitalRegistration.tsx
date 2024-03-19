@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom"
 import styles from "./HospitalRegistration.module.css"
 import { AuthGuard } from "../AuthGuard/AuthGuard"
+import { useDispatch } from "react-redux"
+import { useSelector } from "react-redux"
+import { selectionSelector } from "../../redux/selection/selectors"
 
 export const HospitalRegistration = () => {
+    const {services, hospitals, times} = useSelector(selectionSelector);
+    const dispatch = useDispatch();
+
     return (
         <AuthGuard>
             <div>
@@ -32,22 +38,21 @@ export const HospitalRegistration = () => {
                                 <label htmlFor="priem">Запись на</label>
                                 <select name="priem">
                                     <option>Выберите из списка</option>
-                                    <option value="Сдача анализов">Сдача анализов</option>
-                                    <option value="Донорство крови">Донорство крови</option>
+                                    { services.map((service) => <option>{service}</option>) }
                                 </select>
                             </div>
                             <div className={styles.form_input}>
                                 <label htmlFor="medorg">Выберите медицинское учреждение</label>
                                 <select name="medorg">
                                     <option>Выберите из списка</option>
-                                    <option value="#"></option>
+                                    { hospitals.map((hospital) => <option>{hospital}</option>) }
                                 </select>
                             </div>
                             <div className={styles.form_input}>
                                 <label htmlFor="time">Выберите время</label>
                                 <select name="time">
                                     <option>Выберите из списка</option>
-                                    <option value="#"></option>
+                                    { times.map((time) => <option>{time}</option>) }
                                 </select>
                             </div>
                             <button>Записаться</button>
