@@ -2,21 +2,48 @@ import express, { Express } from "express";
 import dotenv from "dotenv";
 import { router } from "./routes/test.js";
 
+
 dotenv.config();
 
 const app: Express = express();
 const port = process.env.PORT || 3000;
 
-app.use("/", router);
+const keycloakHost = '192.168.5.6';
+const realmName = 'tikaya';
 
-const errorHandler = (error: any, req: any, res: any, next: any) => {
-    const status = error.status || 422;
-    res.status(status).send(error.message);
-}
+app.use((req: any, res: any, next: any) => {
+    if (req.headers.authorization) {
+        const options = {
+            method: 'GET',
+            url: `https://${keycloakHost}/auth/realms/${realmName}/protocol/openid-connect/userinfo`,
+            headers: {
+                Authorization: req.headers.authorization,
+            },
+        };
 
-app.use(express.json());
-app.use(errorHandler);
+        async function getData() {
+            const url = `https://${keycloakHost}/auth/realms/${realmName}/protocol/openid-connect/userinfo`;
+            try {
+                let response = await fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        Authorization: req.headers.authorization,
+                    }
+                });
 
-app.listen(port, () => {
-    console.log(`Server Started at ${port}`);
-});
+                if (response.status !== 200) {
+                    res.status(401).json({
+                        error: `unauthorized`
+                    });
+                }
+                else {
+                    next();
+                }
+            } catch(error) {
+                console.log(error);
+            }
+            
+        }
+    }
+
+})
