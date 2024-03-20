@@ -27,8 +27,11 @@ export const registrationClinicSlice = createSlice({
     initialState,
     reducers: {
         addInfo: (state, action) => {
-            state = action.payload
-        }
+            state.firstname = action.payload.firstname;
+            state.hospital = action.payload.hospital;
+            state.time = action.payload.time;
+        },
+        
     }
 })
 
