@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch } from "react-redux";
 import selectionReducer from "./selection/selectionSlice"
+import registrationClinicReducer from "./registrationClinic/registrationClinicSlice"
 
 export const store = configureStore({
     reducer: {
-        selection: selectionReducer
+        selection: selectionReducer,
+        registration: registrationClinicReducer
     }
 })
 
