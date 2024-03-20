@@ -102,8 +102,8 @@ export const Message = () => {
     console.log(firstname, hospital, time)
 
     return (
-        <div>
-            {firstname}, Ваша запись на {time} в {hospital} зарегистрирована!
+        <div className={styles.message_container}>
+            <p><span>{firstname}</span>, Ваша запись на {time} в {hospital} зарегистрирована!</p>
         </div>
     )
 }
