@@ -7,8 +7,6 @@ import { useAuth } from "react-oidc-context"
 
 export const Header = () => {
     const auth = useAuth();
-    const clientEmail = auth.user?.profile.preferred_username;
-    const clientLastname = auth.user?.profile.family_name;
     const authButtonHandler = () =>
         auth.isAuthenticated
             ? void auth.signoutRedirect({
@@ -40,9 +38,7 @@ export const Header = () => {
                 </Link>
                 <div>
                     <div>
-                        {auth.isAuthenticated && clientLastname}
-                        {clientLastname && <br />}
-                        {auth.isAuthenticated && clientEmail}
+                        {auth.isAuthenticated && <Link to="personal">Личный кабинет</Link>}
                     </div>
                     <nav>
                         <button onClick={authButtonHandler}>

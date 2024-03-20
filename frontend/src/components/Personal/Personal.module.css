@@ -69,14 +69,18 @@ h3 {
 
 .card_info {
     position: absolute;
-    top: 98%;
+    top: 120%;
     margin-left: 25px;
     z-index: 2;
 }
 
 .card_doctors {
     position: absolute;
-    top: 151%;
+    top: 173%;
     margin-left: 25px;
     z-index: 2;
+}
+
+.reg {
+    font-size: 20px;
 }
